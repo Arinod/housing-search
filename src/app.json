@@ -4,6 +4,8 @@
     "pages/counter",
     "pages/map",
     "pages/housingInfo",
+    "pages/dynamicOpening",
+    "pages/moreSold",
     {
       "path": "packageA/logs",
       "subPackage": true
@@ -15,19 +17,25 @@
     "navigationBarTitleText": "房源一点通",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "list":[
-      {
-        "pagePath":"pages/index",
-        "text":"首页",
-        "iconPath":"./static/img/home.png",
-        "selectedIconPath":"./static/img/home-selected.png"
+  "tabBar": {
+    "selectedColor": "#f4a300",
+    "list": [{
+        "pagePath": "pages/index",
+        "text": "首页",
+        "iconPath": "./static/img/home.png",
+        "selectedIconPath": "./static/img/home-selected.png"
       },
       {
-        "pagePath":"pages/housingInfo",
-        "text":"项目详情",
-        "iconPath":"./static/img/info.png",
-        "selectedIconPath":"./static/img/info-selected.png"
+        "pagePath": "pages/housingInfo",
+        "text": "项目详情",
+        "iconPath": "./static/img/info.png",
+        "selectedIconPath": "./static/img/info-selected.png"
+      },
+      {
+        "pagePath": "pages/dynamicOpening",
+        "text": "开盘动态",
+        "iconPath": "./static/img/dynamic.png",
+        "selectedIconPath": "./static/img/dynamic-selected.png"
       }
     ]
   }

@@ -3,6 +3,8 @@ import { mapState, mapMutations } from "vuex";
 export default {
   globalConfig: {
     usingComponents: {
+      "van-row": "vant-weapp/dist/row/index",
+      "van-col": "vant-weapp/dist/col/index",
       "van-toast": "vant-weapp/dist/toast/index",
       "van-tag": "vant-weapp/dist/tag/index",
       "van-search": "vant-weapp/dist/search/index",
