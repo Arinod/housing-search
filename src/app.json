@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index",
+    "pages/counter",
+    "pages/map",
+    "pages/housingInfo",
+    {
+      "path": "packageA/logs",
+      "subPackage": true
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "房源一点通",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/index",
+        "text":"首页",
+        "iconPath":"./static/img/home.png",
+        "selectedIconPath":"./static/img/home-selected.png"
+      },
+      {
+        "pagePath":"pages/housingInfo",
+        "text":"项目详情",
+        "iconPath":"./static/img/info.png",
+        "selectedIconPath":"./static/img/info-selected.png"
+      }
+    ]
+  }
+}
