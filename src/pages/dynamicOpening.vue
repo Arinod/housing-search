@@ -1,3 +1,4 @@
+// 开盘动态
 <template>
   <div class="container">
     <div class="housing-aerial-view">
@@ -25,8 +26,24 @@
       <van-panel title="全部户型" status="共24种">
         <div class="housing-type-classify">
           <van-tabs>
-            <van-tab title="全部">内容 1</van-tab>
-            <van-tab title="标签 2">内容 2</van-tab>
+            <van-tab title="全部">
+              <div class="housing-type-classify-list">
+                <van-row gutter="20">
+                  <van-col span="12" v-for="(model,index) in doorModel" :key="index">
+                    <DoorModel
+                      :img="model.img"
+                      :model="model.model"
+                      :area="model.area"
+                      :building="model.building"
+                      :review="model.review"
+                    ></DoorModel>
+                  </van-col>
+                </van-row>
+              </div>
+            </van-tab>
+            <van-tab title="标签 2">
+              <div class="housing-type-classify-list"></div>
+            </van-tab>
             <van-tab title="标签 3">内容 3</van-tab>
             <van-tab title="标签 4">内容 4</van-tab>
             <van-tab title="标签 5">内容 5</van-tab>
@@ -39,12 +56,14 @@
 </template>
 <script>
 import OnSolding from "../components/onSolding";
+import DoorModel from "../components/doorModel";
 export default {
   config: {
     navigationBarTitleText: "开盘动态"
   },
   components: {
-    OnSolding
+    OnSolding,
+    DoorModel
   },
   data() {
     return {
@@ -60,6 +79,32 @@ export default {
           id: "16#",
           openTime: "2018.05",
           deadline: "2019.06"
+        }
+      ],
+      doorModel: [
+        {
+          img:
+            "http://imgs.julive.com/l?p=eyJpbWdfcGF0aCI6IlwvVXBsb2FkXC9zcGlkZXJfaG91c2VfdHlwZV9pbWdcLzIyNzA2N1wvNTZkZGEzNzZhOWYxYjIyYmVlYjBiOGE3MDUxMmVkZjguanBnIiwiaW1nX3BhcmFtX2FyciI6W10sIngtb3NzLXByb2Nlc3MiOiJcL3F1YWxpdHkscV85MCJ9",
+          model: "4室2厅",
+          area: "约 142㎡",
+          building: "11#",
+          review: "四开间朝 南北通透"
+        },
+        {
+          img:
+            "http://imgs.julive.com/l?p=eyJpbWdfcGF0aCI6IlwvVXBsb2FkXC9zcGlkZXJfaG91c2VfdHlwZV9pbWdcLzIyNzA2N1wvNTZkZGEzNzZhOWYxYjIyYmVlYjBiOGE3MDUxMmVkZjguanBnIiwiaW1nX3BhcmFtX2FyciI6W10sIngtb3NzLXByb2Nlc3MiOiJcL3F1YWxpdHkscV85MCJ9",
+          model: "3室2厅",
+          area: "约 118㎡",
+          building: "13#",
+          review: "双卫设计 利用率高"
+        },
+        {
+          img:
+            "http://imgs.julive.com/l?p=eyJpbWdfcGF0aCI6IlwvVXBsb2FkXC9zcGlkZXJfaG91c2VfdHlwZV9pbWdcLzIyNzA2N1wvNTZkZGEzNzZhOWYxYjIyYmVlYjBiOGE3MDUxMmVkZjguanBnIiwiaW1nX3BhcmFtX2FyciI6W10sIngtb3NzLXByb2Nlc3MiOiJcL3F1YWxpdHkscV85MCJ9",
+          model: "5室3厅",
+          area: "约 150㎡",
+          building: "13#",
+          review: "复式楼层 利用率高"
         }
       ]
     };
@@ -104,6 +149,12 @@ export default {
   }
   .housing-type {
     margin-top: 10rpx;
+    .housing-type-classify {
+      .housing-type-classify-list {
+        min-height: 500px;
+        padding: 10px;
+      }
+    }
   }
 }
 </style>
